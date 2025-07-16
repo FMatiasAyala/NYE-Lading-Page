@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E-books Nutrición y Entrenamiento | Promo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero-img hero-img-presentation">
+        <img src="static/PresentacionHero.jpeg" alt="Nutricionista" />
+        <div class="nutri-label">
+          Lic. Gonzalo Acevedo<br />
+          <span>Nutricionista Deportivo & Coach</span>
+        </div>
+      </div>
+      <div class="hero-content hero-content-presentation">
+        <h1>Nutrición & Entrenamiento</h1>
+        <p>
+          Descubrí los mejores <b>e-books de salud y fitness</b> con planes
+          prácticos, recetas, entrenos y motivación real.<br />
+          Aprovechá la promo, elegí el tuyo y arrancá el cambio.
+        </p>
+        <button class="cta-btn" onclick="scrollToEbooks()">Ver E-books</button>
+      </div>
+    </section>
+
+    <!-- VIDEO PRESENTACIÓN -->
+    <div class="section-label" style="margin-top: 18px">
+      Mirá el video y sumate
+    </div>
+    <section class="video-section" style="margin-bottom: 0">
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          gap: 44px;
+        "
+      >
+        <div class="video-container" style="max-width: 360px">
+          <video
+            controls
+            playsinline
+            autoplay
+            muted
+            loop
+            style="
+              width: 100%;
+              aspect-ratio: 9/16;
+              border-radius: 18px;
+              box-shadow: 0 2px 18px #11c67022;
+            "
+          >
+            <source src="/static/VideoPresentacion.mp4" type="video/mp4" />
+            Tu navegador no soporta videos en HTML5.
+          </video>
+        </div>
+        <div
+          class="video-content"
+          style="
+            max-width: 470px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 22px #11b87015;
+          "
+        >
+          <div
+            class="mini-label"
+            style="
+              background: linear-gradient(90deg, #26cf91, #26ba74 80%);
+              color: #fff;
+            "
+          >
+            PROMO EXCLUSIVA
+          </div>
+          <h1 style="font-size: 2em; color: #11b870; margin: 0 0 10px 0">
+            ¡Tu cambio empieza hoy!
+          </h1>
+          <h3 style="color: #3be6a2; margin: 0 0 13px 0">
+            Nutrición & Entrenamiento
+          </h3>
+          <div class="promo-timer">
+            <span id="promo">🔥 PROMO -40% solo por </span>
+            <span id="timer">24:00:00</span>
+          </div>
+          <p>
+            Descubrí los mejores <b>e-books de salud y fitness</b> con planes
+            prácticos, recetas, entrenos y motivación real.<br />
+            Aprovechá la promo, elegí el tuyo y arrancá el cambio.
+          </p>
+          <button class="cta-btn" onclick="scrollToEbooks()">
+            Ver E-books
+          </button>
+        </div>
+      </div>
+      <div class="video-wave" style="margin-top: 48px">
+        <svg
+          viewBox="0 0 1440 70"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+        >
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,16 C450,89 750,-40 1440,24 L1440,120 L0,120 Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- MINI TITULO EBOOKS -->
+    <div class="section-label">E-books destacados</div>
+    <!-- EBOOKS ESCALONADOS -->
+    <section class="ebooks-section" id="ebooks">
+      <div class="ebook-row">
+        <div class="ebook-card">
+          <img
+            class="ebook-img"
+            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80"
+            alt="Entrenamiento"
+          />
+          <div class="ebook-info">
+            <h4>Entrenamiento Funcional</h4>
+            <p>
+              Rutinas paso a paso, progresivas, para hacer en casa o gym.
+              Incluye guía de calentamiento, video ejemplos y plan de 6 semanas.
+            </p>
+            <button
+              class="mini-btn"
+              onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
+            >
+              Comprar “Entrenamiento Funcional”
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="ebook-row">
+        <div class="ebook-card">
+          <div class="ebook-info">
+            <h4>Nutrición Sin Dietas</h4>
+            <p>
+              Aprendé a comer bien sin restricciones, menúes adaptables, recetas
+              económicas y claves para mantenerte motivado y sano de verdad.
+            </p>
+            <button
+              class="mini-btn"
+              onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
+            >
+              Comprar “Entrenamiento Funcional”
+            </button>
+          </div>
+          <img
+            class="ebook-img"
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
+            alt="Nutricion"
+          />
+        </div>
+      </div>
+      <div class="ebook-row">
+        <div class="ebook-card">
+          <img
+            class="ebook-img"
+            src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad04?auto=format&fit=crop&w=300&q=80"
+            alt="Recetas Power"
+          />
+          <div class="ebook-info">
+            <h4>Recetas Power</h4>
+            <p>
+              30 recetas potentes: rápidas, ricas y sin vueltas. Meriendas,
+              desayunos y comidas fuertes para energía todo el día.
+            </p>
+            <button
+              class="mini-btn"
+              onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
+            >
+              Comprar “Entrenamiento Funcional”
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Onda decorativa abajo de ebooks -->
+      <div class="ebooks-wave">
+        <svg
+          viewBox="0 0 1440 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+        >
+          <path
+            fill="#d4fbe4"
+            fill-opacity="1"
+            d="M0,30 C200,70 800,-40 1440,38 L1440,140 L0,140 Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!-- MINI TITULO TESTIMONIOS -->
+    <div class="section-label">Testimonios reales</div>
+    <section class="testimonios-section">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonio 1 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/88.jpg"
+                class="testimonial-avatar-lg"
+                alt="Sofía Álvarez"
+              />
+              <div class="testimonial-text">
+                "¡Me cambió la vida! El plan de Facu es súper fácil de seguir y
+                la motivación es real."
+              </div>
+              <div class="testimonial-author">– Sofía Álvarez</div>
+            </div>
+          </div>
+          <!-- Testimonio 2 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/65.jpg"
+                class="testimonial-avatar-lg"
+                alt="Martín Gómez"
+              />
+              <div class="testimonial-text">
+                "Los ebooks son completos, prácticos y las recetas, un golazo.
+                Bajé 7kg en 2 meses."
+              </div>
+              <div class="testimonial-author">– Martín Gómez</div>
+            </div>
+          </div>
+          <!-- Testimonio 3 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                class="testimonial-avatar-lg"
+                alt="Florencia Ruiz"
+              />
+              <div class="testimonial-text">
+                "No es una dieta, es aprender a comer. Lo recomiendo a todos mis
+                amigos."
+              </div>
+              <div class="testimonial-author">– Florencia Ruiz</div>
+            </div>
+          </div>
+          <!-- Testimonio 4 -->
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <img
+                src="https://randomuser.me/api/portraits/men/33.jpg"
+                class="testimonial-avatar-lg"
+                alt="Carlos Sosa"
+              />
+              <div class="testimonial-text">
+                "El entrenamiento funciona y no es aburrido. Nunca sentí tanta
+                energía."
+              </div>
+              <div class="testimonial-author">– Carlos Sosa</div>
+            </div>
+          </div>
+          <!-- Agregá más si querés -->
+        </div>
+        <!-- Flechas -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Paginación opcional -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- MINI TITULO CONTACTO -->
+    <div class="section-label">¿Necesitás asesoría personalizada?</div>
+    <section class="contacto-section" id="contacto">
+      <h2>Contactate conmigo</h2>
+      <img
+        src="static/PresentacionHero.jpeg"
+        class="contacto-avatar-lg"
+        alt="Florencia Ruiz"
+      />
+      <p>
+        ¿Dudas sobre tu nutrición, entrenamiento o los e-books?
+        <br />
+        Escribime y te ayudo en lo que necesites 👇
+      </p>
+      <div class="contact-buttons">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          class="cta-social instagram-btn"
+        >
+          <span class="icon-ig">
+            <!-- IG ICONO SVG -->
+            <svg width="22" height="22" viewBox="0 0 22 22">
+              <circle
+                cx="11"
+                cy="11"
+                r="8.2"
+                stroke="#fff"
+                stroke-width="2.1"
+                fill="none"
+              />
+              <circle
+                cx="11"
+                cy="11"
+                r="3.3"
+                stroke="#fff"
+                stroke-width="2"
+                fill="none"
+              />
+              <circle cx="16.2" cy="5.8" r="1.1" fill="#fff" />
+            </svg>
+          </span>
+          Instagram
+        </a>
+        <a
+          href="https://wa.me/5491123456789"
+          target="_blank"
+          class="cta-social whatsapp-btn"
+        >
+          <span class="icon-wa">
+            <!-- WHATSAPP ICONO SVG -->
+            <svg width="22" height="22" viewBox="0 0 32 32">
+              <circle cx="16" cy="16" r="15" fill="#fff" />
+              <path
+                d="M25 24c-2 2-6.5 2.5-11-3C9 16 8.5 11 10.5 9c1.4-1.5 3.7-1.4 4.7-0.2l1.1 1.5c0.7 1 0.7 2.1-0.2 2.8l-1 1c0.4 0.8 1.4 2.6 3.1 3.7l1-1c0.7-0.7 1.7-0.7 2.6-0.1l1.5 1.1c1.2 1 1.2 3.2-0.2 4.7z"
+                fill="#25D366"
+              />
+            </svg>
+          </span>
+          WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <strong>Gonzalo Acevedo Nutrición</strong>
+          <br />
+          <a href="mailto:info@nutrifacu.com" class="footer-link"
+            >info@nutrifacu.com</a
+          >
+          &nbsp;|&nbsp;
+          <a href="#" class="footer-link" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+        </div>
+        <div class="footer-extra">
+          <span
+            >© 2025 – Todos los derechos reservados a
+            <b>Gonzalo Acevedo</b></span
+          >
+          <span> | Desarrollado por <b>Fabio Ayala</b> </span>
+        </div>
+      </div>
+    </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          900: { slidesPerView: 3 },
+          600: { slidesPerView: 2 },
+          0: { slidesPerView: 1 },
+        },
+      });
+    </script>
+
+    <script>
+      // CRONÓMETRO PROMO
+      let timeInSeconds = 20 * 60; // 20 minutos
+      function pad(n) {
+        return n < 10 ? "0" + n : n;
+      }
+      function updateTimer() {
+        let min = Math.floor(timeInSeconds / 60);
+        let sec = timeInSeconds % 60;
+        document.getElementById("timer").innerText = pad(min) + ":" + pad(sec);
+        if (timeInSeconds > 0) {
+          timeInSeconds--;
+          setTimeout(updateTimer, 1000);
+        } else {
+          document.getElementById("promo").innerText = "PROMO FINALIZADA";
+          document.getElementById("timer").style.background = "#f44";
+        }
+      }
+      updateTimer();
+
+      // SCROLL a EBOOKS con anim
+      function scrollToEbooks() {
+        document
+          .getElementById("ebooks")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>
