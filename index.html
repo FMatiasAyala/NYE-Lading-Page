@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -252,7 +253,7 @@
       <img
         src="static/PresentacionHero.jpeg"
         class="contacto-avatar-lg"
-        alt="Florencia Ruiz"
+        alt="Gonzalo Acevedo"
       />
       <p>
         ¿Dudas sobre tu nutrición, entrenamiento o los e-books?
@@ -404,116 +405,7 @@
         </div>
       </div>
     </footer>
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 24,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          900: { slidesPerView: 3 },
-          600: { slidesPerView: 2 },
-          0: { slidesPerView: 1 },
-        },
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // animar solo una vez
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-          }
-        );
-
-        document.querySelectorAll(".animate-on-scroll").forEach((el) => {
-          observer.observe(el);
-        });
-      });
-
-      const navbar = document.querySelector(".navbar");
-
-      const sections = document.querySelectorAll("section");
-
-      const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.3,
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-
-            // Limpiamos clases anteriores
-            navbar.className = "navbar";
-            // Le sumamos una nueva clase según el ID
-            navbar.classList.add(`${id}-theme`);
-          }
-        });
-      }, options);
-
-      sections.forEach((section) => {
-        observer.observe(section);
-      });
-      // CRONÓMETRO PROMO
-      let timeInSeconds = 20 * 60; // 20 minutos
-      function pad(n) {
-        return n < 10 ? "0" + n : n;
-      }
-      function updateTimer() {
-        let min = Math.floor(timeInSeconds / 60);
-        let sec = timeInSeconds % 60;
-        document.getElementById("timer").innerText = pad(min) + ":" + pad(sec);
-        if (timeInSeconds > 0) {
-          timeInSeconds--;
-          setTimeout(updateTimer, 1000);
-        } else {
-          document.getElementById("promo").innerText = "PROMO FINALIZADA";
-          document.getElementById("timer").style.background = "#f44";
-        }
-      }
-      updateTimer();
-
-      // SCROLL a EBOOKS con anim
-      function scrollToEbooks() {
-        document
-          .getElementById("ebooks")
-          .scrollIntoView({ behavior: "smooth" });
-      }
-      function scrollToContacto() {
-        document
-          .getElementById("contacto")
-          .scrollIntoView({ behavior: "smooth" });
-      }
-      window.addEventListener("load", function () {
-        document.body.classList.add("loaded");
-        setTimeout(() => {
-          const preloader = document.getElementById("preloader");
-          if (preloader) preloader.remove();
-        }, 4000); // espera total de 1.2s para mostrar bien la barra
-      });
-      function toggleMenu() {
-        document.querySelector(".navbar-menu").classList.toggle("active");
-      }
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
