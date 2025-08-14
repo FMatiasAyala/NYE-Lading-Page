@@ -1,0 +1,247 @@
+:root {
+  --color-strong: #0a0f0c; /* base casi negro con tinte verde */
+  --color-soft: #141a16; /* segundo tono oscuro */
+  --color-base: #0d120f; /* neutro oscuro */
+  --color-accent: #9fe870; /* verde eléctrico */
+  --color-dark: #1a1a1a; /* texto en superficies claras */
+}
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+.section-label{
+    color: var(--color-accent);
+}
+
+.plan90-hero {
+  padding: 80px 5vw 40px;
+  background: radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(159, 232, 112, 0.1),
+      transparent 60%
+    ),
+    linear-gradient(135deg, #0b100d 0%, #0e1310 45%, #141a16 100%);
+  color: #e9f3ea;
+  position: relative;
+  overflow: hidden;
+}
+.plan90-hero .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.plan90-badge {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.35);
+  border-color: #ffffff33;
+  color: #e9f3ea;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+.plan90-title {
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  line-height: 1.1;
+  margin: 6px 0 14px;
+  color: #fff;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, 0.45);
+}
+.plan90-sub {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  color: #d7e6dc;
+  margin-bottom: 18px;
+}
+.plan90-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin: 14px 0 20px;
+}
+.plan90-points li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.plan90-points li::before {
+  content: "✔";
+  color: var(--color-accent);
+  font-weight: 900;
+  margin-top: 1px;
+}
+.plan90-hero-img img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid #1e2a23;
+}
+.plan90-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+}
+.plan90-guarantee {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.cta-btn {
+  background: var(--color-accent);
+  color: #0b0f0c;
+  border: 1px solid rgba(159, 232, 112, 0.25);
+  box-shadow: 0 10px 24px rgba(159, 232, 112, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(159, 232, 112, 0.28);
+}
+.cta-btn.is-outline,
+.cta-btn[style*="var(--color-strong)"] {
+  /* atrapa el segundo botón inline */
+  background: transparent !important;
+  color: #e9f3ea !important;
+  border: 1px solid #2a362e !important;
+}
+/* Sección “Qué incluye” */
+.plan90-includes {
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 0 5vw;
+  color: #e9f3ea;
+}
+.plan90-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.plan90-card {
+  background: #0f1512;
+  border: 1px solid #1e2a23;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+}
+.plan90-card h3 {
+  margin-bottom: 8px;
+  color: #d2f2d9;
+}
+.plan90-card p {
+  color: #cfe1d5;
+  opacity: 0.95;
+}
+
+/* Línea de tiempo (12 semanas) */
+.plan90-timeline {
+  margin: 24px auto 12px;
+  padding: 50px 5vw;
+  background: linear-gradient(135deg, #0c100d, #121812);
+  color: #e9f3ea;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 22px;
+  max-width: 1200px;
+}
+.plan90-steps {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.step {
+  background: #101712;
+  border: 1px solid #1e2a23;
+  color: #dfeae2;
+  border-radius: 14px;
+  padding: 16px;
+}
+.step b {
+  color: var(--color-accent);
+}
+
+/* Precios / CTA */
+.plan90-pricing {
+  max-width: 980px;
+  margin: 40px auto;
+  padding: 32px 5vw;
+  background: linear-gradient(135deg, #0f1512, #0c100d);
+  color: #e9f3ea;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 22px;
+  text-align: center;
+}
+.plan90-price {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #e9f3ea;
+  margin: 6px 0 2px;
+}
+.plan90-note {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  color: #c7d6cd;
+  margin-top: 8px;
+}
+
+/* FAQ */
+.plan90-faq {
+  max-width: 980px;
+  color: #e9f3ea;
+  margin: 40px auto 20px;
+  padding: 0 5vw;
+}
+.faq-item {
+  background: #0f1512;
+  border: 1px solid #1e2a23;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+}
+.faq-item h4 {
+  margin-bottom: 6px;
+  color: #d2f2d9;
+}
+
+.footer-main, .footer-extra{
+  color: #d2f2d9;
+}
+@media (max-width: 980px) {
+  .plan90-hero .wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .plan90-points {
+    grid-template-columns: 1fr;
+  }
+  .plan90-hero-img {
+    order: -1;
+  }
+  .plan90-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .plan90-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .plan90-grid {
+    grid-template-columns: 1fr;
+  }
+  .plan90-steps {
+    grid-template-columns: 1fr;
+  }
+}

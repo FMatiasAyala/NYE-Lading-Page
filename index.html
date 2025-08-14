@@ -8,28 +8,27 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div id="preloader">
-      <img src="static/ISOVERDE.jpg" alt="Logo" class="preloader-logo" />
+      <img src="static/ISOAMARILLO.svg" alt="Logo" class="preloader-logo" />
       <div class="preloader-bar">
         <div class="preloader-fill"></div>
       </div>
     </div>
     <header class="navbar">
       <div class="navbar-container">
-        <div class="navbar-logo">
-          <img src="/static/ISOVERDE.jpg" alt="Logo" />
-        </div>
+        <a href="#hero" class="navbar-logo">
+          <img src="static/ISOAMARILLO.svg" alt="Logo" />
+        </a>
         <nav class="navbar-menu">
-          <a href="#inicio">Inicio</a>
+          <a href="#hero">Inicio</a>
           <a href="#ebooks">E-books</a>
           <a href="#testimonios">Testimonios</a>
           <a href="#contacto">Contacto</a>
@@ -158,75 +157,55 @@
       </div>
     </section>
     <!-- MINI TITULO EBOOKS -->
-    <div class="section-label animate-on-scroll">E-books destacados</div>
-    <!-- EBOOKS ESCALONADOS -->
-    <section class="ebooks-section" id="ebooks">
-      <div class="ebook-row">
-        <div class="ebook-card animate-on-scroll">
-          <img
-            class="ebook-img"
-            src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80"
-            alt="Entrenamiento"
-          />
-          <div class="ebook-info">
-            <h4>Entrenamiento Funcional</h4>
-            <p>
-              Rutinas paso a paso, progresivas, para hacer en casa o gym.
-              Incluye guía de calentamiento, video ejemplos y plan de 6 semanas.
-            </p>
-            <button
-              class="mini-btn"
-              onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
-            >
-              Comprar “Entrenamiento Funcional”
-            </button>
-          </div>
-        </div>
+    <div class="section-label animate-on-scroll">Destacados</div>
+
+<section class="ebooks-section" id="ebooks">
+  <div class="ebooks-grid">
+    <!-- IZQUIERDA: Ebook -->
+    <article class="ebook-card animate-on-scroll">
+      <img
+        class="ebook-img"
+        src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+        alt="Entrenamiento"
+      />
+      <div class="ebook-info">
+        <h4>Entrenamiento Funcional</h4>
+        <p>
+          Rutinas paso a paso para casa o gym. Incluye calentamiento, videos y plan de 6 semanas.
+        </p>
+        <button
+          class="mini-btn"
+          onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
+        >
+          Comprar “Entrenamiento Funcional”
+        </button>
       </div>
-      <div class="ebook-row">
-        <div class="ebook-card animate-on-scroll">
-          <div class="ebook-info">
-            <h4>Nutrición Sin Dietas</h4>
-            <p>
-              Aprendé a comer bien sin restricciones, menúes adaptables, recetas
-              económicas y claves para mantenerte motivado y sano de verdad.
-            </p>
-            <button
-              class="mini-btn"
-              onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
-            >
-              Comprar “Entrenamiento Funcional”
-            </button>
-          </div>
-          <img
-            class="ebook-img"
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=300&q=80"
-            alt="Nutricion"
-          />
-        </div>
+    </article>
+
+    <!-- DERECHA: Plan 90 Días -->
+    <article class="plan-card animate-on-scroll">
+      <img
+        class="ebook-img"
+        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80"
+        alt="Plan 90 Días"
+      />
+      <div class="plan-info">
+        <h4>Plan 90 Días</h4>
+        <p>
+          Transformá tu cuerpo y energía con un plan integral de entrenamiento, nutrición y motivación.
+          Incluye seguimiento, rutinas, recetas y acceso a comunidad privada.
+        </p>
+        <button
+          class="mini-btn"
+          onclick="window.location.href='plan90.html'"
+        >
+          Ver Plan 90 Días
+        </button>
       </div>
-      <div class="ebook-row">
-        <div class="ebook-card animate-on-scroll">
-          <img
-            class="ebook-img"
-            src="https://images.unsplash.com/photo-1510626176961-4b57d4fbad04?auto=format&fit=crop&w=300&q=80"
-            alt="Recetas Power"
-          />
-          <div class="ebook-info">
-            <h4>Recetas Power</h4>
-            <p>
-              30 recetas potentes: rápidas, ricas y sin vueltas. Meriendas,
-              desayunos y comidas fuertes para energía todo el día.
-            </p>
-            <button
-              class="mini-btn"
-              onclick="window.open('https://mpago.la/TULINKENTRENAMIENTO', '_blank')"
-            >
-              Comprar “Entrenamiento Funcional”
-            </button>
-          </div>
-        </div>
-      </div>
+    </article>
+  </div>
+</section>
+
       <!-- Onda decorativa abajo de ebooks -->
       <div class="ebooks-wave">
         <svg
@@ -311,7 +290,7 @@
     </section>
     <!-- MINI TITULO TESTIMONIOS -->
     <div class="section-label animate-on-scroll">Testimonios reales</div>
-    <section class="testimonios-section animate-on-scroll">
+    <section class="testimonios-section animate-on-scroll" id="testimonios">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <!-- Testimonio 1 -->

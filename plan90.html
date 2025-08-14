@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mi Plan de 90 Días | Gonzalo Acevedo</title>
+
+    <!-- Fuente / Swiper / Estilos globales -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/plan90.css" />
+  </head>
+  <body>
+
+    <!-- Navbar (reutiliza tu estilo actual) -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="index.html#hero" class="navbar-logo">
+          <img src="static/ISOVERDE.jpg" alt="Logo" />
+        </a>
+        <nav class="navbar-menu">
+          <a href="index.html#hero">Inicio</a>
+          <a href="index.html#ebooks">E-books</a>
+          <a href="index.html#testimonios">Testimonios</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+        <div class="navbar-toggle" onclick="toggleMenu()">☰</div>
+      </div>
+    </header>
+
+    <!-- HERO del Plan 90 -->
+    <section class="plan90-hero animate-on-scroll" id="inicio">
+      <div class="wrap">
+        <div>
+          <span class="plan90-badge">Programa intensivo · 12 semanas</span>
+          <h1 class="plan90-title">Mi Plan de 90 Días</h1>
+          <p class="plan90-sub">
+            Transformación real en 3 meses: nutrición, entrenamiento y
+            seguimiento personalizado. Todo pensado para que puedas sostenerlo
+            en tu día a día.
+          </p>
+          <ul class="plan90-points">
+            <li>Plan nutricional adaptable a tus horarios y gustos</li>
+            <li>Entrenamientos progresivos (casa o gym)</li>
+            <li>Check-ins semanales y ajustes</li>
+            <li>Recetario práctico y guía de hábitos</li>
+          </ul>
+          <div class="plan90-cta-row">
+            <a
+              class="cta-btn"
+              href="https://mpago.la/TULINK_PLAN90"
+              target="_blank"
+              rel="noopener"
+              >Quiero empezar</a
+            >
+            <span class="plan90-guarantee"
+              >Soporte por WhatsApp · Cupos limitados</span
+            >
+          </div>
+        </div>
+        <div class="plan90-hero-img">
+          <img src="static/plan90.jpg" alt="Plan de 90 días" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Qué incluye -->
+    <section class="plan90-includes animate-on-scroll">
+      <div class="section-label">Qué incluye</div>
+      <div class="plan90-grid">
+        <div class="plan90-card">
+          <h3>Evaluación Inicial</h3>
+          <p>
+            Historia clínica, objetivos, preferencias alimentarias y nivel de
+            entrenamiento.
+          </p>
+        </div>
+        <div class="plan90-card">
+          <h3>Plan Nutricional</h3>
+          <p>
+            Menú flexible por objetivos, lista de compras y reemplazos
+            inteligentes.
+          </p>
+        </div>
+        <div class="plan90-card">
+          <h3>Entrenamiento</h3>
+          <p>
+            Rutinas progresivas con indicaciones claras. Opción casa o gimnasio.
+          </p>
+        </div>
+        <div class="plan90-card">
+          <h3>Seguimiento Semanal</h3>
+          <p>Check-in por WhatsApp/Email, ajustes y feedback personalizado.</p>
+        </div>
+        <div class="plan90-card">
+          <h3>Recetario Power</h3>
+          <p>
+            Desayunos, meriendas y comidas rápidas para sostener energía todo el
+            día.
+          </p>
+        </div>
+        <div class="plan90-card">
+          <h3>Hábitos & Mindset</h3>
+          <p>Guía de hábitos, sueño, hidratación y gestión del estrés.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline 12 semanas -->
+    <section class="plan90-timeline animate-on-scroll" id="cronograma">
+      <div class="section-label">Cronograma de 12 Semanas</div>
+      <div class="plan90-steps">
+        <div class="step">
+          <b>Sem 1–2</b><br />Ajustes iniciales, técnica y adherencia.
+        </div>
+        <div class="step">
+          <b>Sem 3–4</b><br />Progresión controlada y hábitos clave.
+        </div>
+        <div class="step">
+          <b>Sem 5–6</b><br />Optimización de macros y fuerza básica.
+        </div>
+        <div class="step">
+          <b>Sem 7–8</b><br />Estrategias de estancamiento y variedad.
+        </div>
+        <div class="step">
+          <b>Sem 9–10</b><br />Afinar detalles: performance y recuperación.
+        </div>
+        <div class="step">
+          <b>Sem 11–12</b><br />Consolidación y plan de mantenimiento.
+        </div>
+        <div class="step">
+          <b>Bonus</b><br />Material extra y check-list final.
+        </div>
+        <div class="step">
+          <b>Después</b><br />Ruta sugerida para continuar sin rebote.
+        </div>
+      </div>
+    </section>
+
+    <!-- Precios / CTA -->
+    <section class="plan90-pricing animate-on-scroll" id="precio">
+      <h2>Empezá hoy</h2>
+      <div class="plan90-price">
+        $ <span style="color: var(--color-accent)">CONSULTAR</span>
+      </div>
+      <p class="plan90-note">
+        Pago único o cuotas. Cupos limitados para asegurar seguimiento de
+        calidad.
+      </p>
+      <div style="margin-top: 16px">
+        <a
+          class="cta-btn"
+          href="https://mpago.la/TULINK_PLAN90"
+          target="_blank"
+          rel="noopener"
+          >Sumarme al Plan 90</a
+        >
+        <a
+          class="cta-btn"
+          style="background: var(--color-strong); margin-left: 8px"
+          href="index.html#contacto"
+          >Tengo dudas</a
+        >
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="plan90-faq animate-on-scroll" id="faq">
+      <div class="section-label">Preguntas frecuentes</div>
+      <div class="faq-item">
+        <h4>¿Necesito gimnasio?</h4>
+        <p>
+          No. Podés elegir versión casa o gym. El plan se adapta a tus recursos.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h4>¿El plan es igual para todos?</h4>
+        <p>
+          No. Hay una base metodológica común, pero todo se personaliza según
+          tus objetivos y contexto.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Cómo es el seguimiento?</h4>
+        <p>
+          Check-in semanal por WhatsApp/Email con ajustes de plan y resolución
+          de dudas.
+        </p>
+      </div>
+      <div class="faq-item">
+        <h4>¿Qué pasa después de los 90 días?</h4>
+        <p>
+          Te doy una guía de mantenimiento y una propuesta de continuidad
+          opcional.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer (reutilizado) -->
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <strong>Gonzalo Acevedo Nutrición</strong><br />
+          <a href="mailto:info@nutrifacu.com" class="footer-link"
+            >info@nutrifacu.com</a
+          >
+          &nbsp;|&nbsp;
+          <a href="#" class="footer-link" target="_blank" rel="noopener"
+            >Instagram</a
+          >
+        </div>
+        <div class="footer-extra">
+          <span
+            >© 2025 – Todos los derechos reservados a
+            <b>Gonzalo Acevedo</b></span
+          >
+          <span> | Desarrollado por <b>Fabio Ayala</b> </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
