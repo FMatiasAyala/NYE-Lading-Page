@@ -7,6 +7,10 @@
   --font-main: "Montserrat", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -141,7 +145,7 @@ h4 {
   gap: 28px;
 }
 .hero-top-title {
-  font-size: clamp(1.4rem, 5vw, 2.6rem);
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
   font-weight: 900;
   letter-spacing: 1px;
   color: var(--color-accent, #9fe870);
@@ -170,7 +174,7 @@ h4 {
 /* Título y subtítulo sobrios */
 .hero-title {
   margin: 0 0 8px 0;
-  font-size: clamp(1.8rem, 6vw, 3.2rem);
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
   font-weight: 900;
   letter-spacing: -0.5px;
   color: #fff;
@@ -187,12 +191,14 @@ h4 {
 .cta-hero {
   background: #9fe870;
   color: #0a0f0c;
-  border: 1px solid rgba(159, 232, 112, 0.3);
-  padding: 12px 22px;
+  border: 1px solid rgba(159, 232, 112, 0.4);
+  padding: 14px 30px;
+  font-size: 1.15rem;
   border-radius: 999px;
   font-weight: 900;
-  box-shadow: 0 10px 24px rgba(159, 232, 112, 0.18);
+  box-shadow: 0 12px 28px rgba(159, 232, 112, 0.22);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  letter-spacing: 0.5px;
 }
 .cta-hero:hover {
   transform: translateY(-2px);
@@ -402,7 +408,7 @@ h4 {
 }
 
 .presentacion-content.presentacion-content-presentation h1 {
-  font-size: 2.8em;
+  font-size: 2.2em;
   font-weight: 900;
   margin: 0 0 12px 0;
   letter-spacing: -1.2px;
@@ -416,6 +422,56 @@ h4 {
   color: var(--color-dark);
   line-height: 1.55;
 }
+
+.presentacion-text-wrapper {
+  max-height: 500px; /* aprox 4 o 5 lineas */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.presentacion-text-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.95));
+  pointer-events: none;
+}
+
+.presentacion-text-wrapper.expanded {
+  max-height: 1000px; /* suficientemente alto */
+}
+
+.presentacion-text-wrapper.expanded::after {
+  display: none;
+}
+
+.ver-mas-btn {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 8px 22px;
+  border-radius: 99px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.25s ease;
+  display: inline-block;
+  backdrop-filter: blur(4px);
+}
+
+.ver-mas-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(159, 232, 112, 0.3);
+}
+
 /* Sección “Qué incluye” */
 .plan90-includes {
   max-width: 1200px;
@@ -469,6 +525,65 @@ h4 {
   margin-top: 8px;
 }
 
+/* Standalone CTA */
+.standalone-cta {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 50%, rgba(159, 232, 112, 0.08) 0%, transparent 70%),
+              linear-gradient(180deg, var(--color-strong), var(--color-base));
+  overflow: hidden;
+}
+
+.standalone-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(159, 232, 112, 0.5), transparent);
+}
+
+.standalone-cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(159, 232, 112, 0.5), transparent);
+}
+
+.standalone-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 22px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.standalone-cta-content .hero-sub {
+  margin: 0;
+  max-width: 600px;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 700;
+  color: #e9f3ea;
+  letter-spacing: 0.3px;
+}
+
+.standalone-cta-content .standalone-sub {
+  font-size: 0.92rem;
+  opacity: 0.7;
+  max-width: 700px;
+  font-style: italic;
+  color: #c5dcc8;
+}
+
 .section {
   padding: 72px 5vw;
   background: linear-gradient(180deg, var(--color-base), var(--color-soft));
@@ -502,7 +617,7 @@ h4 {
   color: #dffad0;
 }
 .title {
-  font-size: clamp(1.6rem, 3.6vw, 2.6rem);
+  font-size: clamp(1.4rem, 3.2vw, 2.1rem);
   line-height: 1.12;
   margin: 10px 0 8px;
   color: var(--color-accent);
@@ -659,10 +774,25 @@ h4 {
   grid-template-columns: 1fr;
 }
 
-.video-card {
-  max-width: 500px;
+.videos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1000px;
   margin: 0 auto;
-  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .videos-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+.video-card {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
@@ -674,6 +804,64 @@ h4 {
   height: auto;
   display: block;
   object-fit: contain; /* para que NO lo recorte nunca */
+}
+
+/* Swiper Casos de Éxito */
+.cases-swiper {
+  width: 100%;
+  padding-bottom: 50px; /* espacio para la paginación */
+}
+
+.cases-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.case-img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px dashed rgba(159, 232, 112, 0.5);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}
+
+.case-img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Controles de Swiper adaptados al theme */
+.cases-swiper .swiper-button-next,
+.cases-swiper .swiper-button-prev {
+  top: 40%;
+}
+
+.cases-swiper .swiper-button-next::after,
+.cases-swiper .swiper-button-prev::after {
+  color: var(--color-accent);
+  font-size: 24px;
+}
+
+.cases-swiper .swiper-pagination-bullet {
+  background: #d5e7d7;
+  opacity: 0.5;
+}
+
+.cases-swiper .swiper-pagination-bullet-active {
+  background: var(--color-accent);
+  opacity: 1;
 }
 
 /* FAQ */
