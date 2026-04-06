@@ -91,6 +91,7 @@ h4 {
   display: none;
   font-size: 1.8em;
   cursor: pointer;
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {
@@ -244,16 +245,16 @@ h4 {
 /* Botón sonido */
 .sound-toggle {
   position: absolute;
-  bottom: 80px;
-  right: 80px;
+  bottom: 14px;
+  right: 14px;
   z-index: 10;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 24px;
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
